@@ -1,0 +1,66 @@
+.services-section {
+  padding: 104px 0 135px;
+  background: $servicesBg;
+}
+.services {
+  list-style: none;
+	padding: 70px 0 0 100px;
+	margin: 0;
+  &__item {
+    background-color: $primaryBgColor;
+	  height: 100px;
+	  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+	  max-width: 400px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-bottom: 20px;
+  }
+  &__link {
+    font-size: $btnFs;
+    font-weight: 600;
+    text-decoration: none;
+	  color: $primaryColor;
+	  text-transform: capitalize;
+	  flex-grow: 1;
+	  text-align: center;
+	  transition: all .3s ease-in, color .3s ease-in;
+    &:hover {
+      // font-size: 22px;
+      transform: scale(1.2);
+	    color: $linkHovercolor;
+    }
+
+  }
+  &__icon {
+    height: 100px;
+    width: 100px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-left: 1px solid #9D9D9D;
+  }
+  &__icon--cart {
+    background-image: url('../img/cart.png');
+  }
+  &__icon--quality {
+    background-image: url('../img/quality.png');
+  }
+  &__icon--delivery {
+    background-image: url('../img/delivery.png');
+  }
+  &__icon--carrot {
+    background-image: url('../img/carrot.png');
+  }
+}
+.services__tomatto {
+  padding-left: 10px;
+}
+.services__title {
+  font-weight: bold;
+	text-transform: capitalize;
+	color: $whiteColor;
+	margin: 0;
+	text-align: right;
+	padding: 187px 0;
+  background: $servicesBg url('../img/tomatto.png') no-repeat 100% 50%;
+}

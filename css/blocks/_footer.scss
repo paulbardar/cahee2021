@@ -1,0 +1,22 @@
+.footer {
+  padding: 36px 0 40px;
+	background: $primaryColor;
+	color: $footerTextColor;
+  p {
+    margin: 0;
+  }
+  .copyright {
+    font-size: $cprtFs;
+  }
+  &__logo {
+    text-align: center;
+	  font: 400 25px/1 $fontTitle;
+  }
+  .slogan {
+    font-size: 15px;
+    text-align: right;
+    span {
+      color: $sloganSpan;
+    }
+  }
+}

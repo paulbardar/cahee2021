@@ -1,0 +1,11 @@
+@mixin titleh2-style {
+  margin: 0;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@mixin section-text-style {
+  max-width: 578px;
+  margin: 0 auto;
+  text-align: center;
+}

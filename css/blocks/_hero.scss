@@ -1,0 +1,150 @@
+.hero {
+  padding: 50px 0 145px;
+  background: $secondaryBgColor url('../img/hero_bg.jpg') no-repeat 50% 50%;
+  background-size: cover;
+	position: relative;
+}
+.header {
+  display: flex;
+  position: relative;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 5px 0 50px;
+  &__logo {
+    font: 400 50px/1 $fontTitle;
+	  text-decoration: none;
+	  color: inherit;
+  }
+  .nav {
+    flex-grow: 1;
+  }
+  .menu {
+    display: flex;
+	  justify-content: flex-end;
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+    &__item{
+      margin-right: 37px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      font: 700 16px/1.56 $fontPrimary;
+	    text-transform: uppercase;
+	    text-decoration: none;
+	    color: $primaryColor;
+	    position: relative;
+	    padding: 3px 0;
+      &:before {
+        content: "";
+	      position: absolute;
+	      display: block;
+	      background-color: $menuLinkBeforeBg;
+	      left: 0;
+	      right: 0;
+	      top: -5px;
+	      height: 3px;
+	      opacity: 0;
+	      transform: translateY(-10px);
+	      transition: transform .2s ease-in, opacity .2s ease-in;
+      }
+      &.active:before,
+      &:hover:before {
+        opacity: 1;
+	      transform: translateY(0);
+      }
+
+    }
+  }
+}
+.hero {
+  &__content {
+    padding: 205px 0 254px;
+    margin: 0 auto;
+    }
+  &__title {
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 900;
+  	margin: 0;
+  	margin-bottom: 18px;
+  }
+  &__text {
+    max-width: 370px;
+    margin-bottom: 15px;
+  }
+  &__button {
+    margin-top: 15px;
+  	 background: $heroBtnBg;
+  	 text-decoration: none;
+  	 color: $whiteColor;
+  	 transition: background-color .3s ease-in;
+     &:hover {
+       color: $heroBtnBg;
+     }
+  }
+  &__scroll {
+    position: absolute;
+    background: transparent url('../img/scroll.png') no-repeat;
+    height: 40px;
+    width: 24px;
+    left: 50%;
+    bottom: 68px;
+    margin-left: -12px;
+    transition: transform .3s ease-in;
+    &:hover {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+// slicknav
+.slicknav_menu {
+  display: none;
+  .slicknav_icon-bar {
+    background-color: $primaryColor;
+  }
+  .slicknav_nav {
+    position: absolute;
+    z-index: 5;
+    min-width: 100%;
+    right: 0;
+    text-outline: 0;
+    top: 80%;
+    background: $secondaryBgColor;
+    .menu__item {
+      margin-right: 0;
+    }
+    @media screen and (max-width: $screen-medium) {
+      padding: 10px 0;
+    }
+  }
+  .slicknav_menutxt {
+      display: none;
+    }
+    .slicknav_btn {
+      display: inline-block;
+      float: right;
+      background: transparent;
+      font-size: 24px;
+      // text-align: center;
+    }
+    .menu {
+      &__item {
+        background: transparent;
+        text-align: center;
+      }
+      &__link {
+        display: inline-block;
+      }
+    }
+
+    @media screen and (max-width: $screen-medium) {
+      display: block;
+      width: 100%;
+      background: transparent;
+
+    }
+}

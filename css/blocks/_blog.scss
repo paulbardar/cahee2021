@@ -1,0 +1,103 @@
+.blog {
+  background: $blogBg;
+	padding-top: 90px;
+	padding-bottom: 117px;
+	color: $whiteColor;
+	position: relative;
+  &__title {
+    @include titleh2-style;
+    text-align: center;
+	  margin-bottom: 32px;
+    color: inherit;
+
+  }
+  &__text {
+    @include section-text-style;
+	  margin-bottom: 37px;
+  }
+  &__row {
+    margin-bottom: 50px;
+  }
+}
+
+.post {
+  position: relative;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  &__link {
+    display: block;
+	  text-decoration:none;
+	  transition: box-shadow .3s, border-radius .3s;
+    &:hover {
+      box-shadow: 0 0 10px 10px rgba(245, 239, 240, 0.3);
+	    border-radius: 5px;
+    }
+  }
+  &__img {
+    display: block;
+	  width: 100%;
+  }
+  &__date {
+    position: absolute;
+	  z-index: 2;
+	  left: 32px;
+	  top: 30px;
+	  font-size: 32px;
+	  text-align: center;
+	  line-height: 1;
+	  font-weight: bold;
+	  background: rgba(38, 38, 38, 0.5);
+	  color: $whiteColor;
+	  padding: 3px 9px 4px 8px;
+	  border-radius: 4px;
+    small {
+      display: block;
+	    font-size: 21px;
+	    text-transform: uppercase;
+	    line-height: 1;
+    }
+  }
+  &__title {
+    position: absolute;
+	  z-index: 2;
+	  left: 0;
+	  bottom: 0;
+	  padding: 20px 19px 57px;
+	  color: inherit;
+	  line-height: 1.2;
+	  margin: 0;
+	  text-align: left;
+	  text-decoration: none;
+	  color: $whiteColor;
+	  background: linear-gradient(to bottom, transparent, #000);
+  }
+  .post__link:hover .post__title {
+    background: transparent;
+  }
+  &__meta {
+    display: inline-flex;
+	  position: absolute;
+	  z-index: 2;
+	  left: 22px;
+	  font-size: 14px;
+	  bottom: 18px;
+    a {
+      margin: 0;
+	    text-decoration: none;
+	    color: inherit;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}
+.section__button {
+  text-align: center;
+}
+.blog__button {
+  background: $blogBtnBg;
+	color: $whiteColor;
+	padding: 12px 45px;
+  &:hover {
+    color: $blogBtnBg;
+  }
+}

@@ -1,0 +1,99 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontPrimary;
+  font-style: normal;
+  font-size: $fsPrimary;
+  line-height: $lhPrimary;
+  font-weight: $primaryWF;
+  color: $primaryColor;
+  background: $primaryBgColor;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $fontPrimary;
+  // letter-spacing: 0.04em;
+  font-weight: 700;
+  margin: 0;
+}
+h1 {
+  font-size: $fsH1Title;
+}
+
+h2 {
+  font-size: $fsH2Title;
+}
+
+h3 {
+  font-size: $fsH3Title;
+}
+h4 {
+  font-size: $fsH4Title;
+}
+h5 {
+  font-size: $fsH5Title;
+}
+h6 {
+  font-size: $fsH6Title;
+}
+
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	text-align: center;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in, transform .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+	display: inline-block;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 26px;
+  margin-bottom: 4px;
+  font-weight: 300;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  font-size: $btnFs;
+}
+
+input[type="submit"],
+input[type="button"],
+button:hover,
+.button:hover {
+  background-color: $primaryBgColor;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  transition: all .3s ease-in;
+  padding: 17px 20px;
+	border-radius: 0;
+  color: $whiteColor;
+	background-color: $inputBg;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,89 @@
+.contact {
+  padding-top: 90px;
+	padding-bottom: 40px;
+	background: $contactBg url("../img/contactbg.jpg") no-repeat 50% 50%;
+	background-size: cover;
+  &__header {
+    text-align: center;
+	  margin-bottom: 40px;
+  }
+  &__title {
+    @include titleh2-style;
+	  margin-bottom: 29px;
+  }
+  &__text {
+    max-width: 370px;
+	  margin: 0 auto;
+  }
+  &__company {
+    padding-left: 68px;
+  }
+  &__item {
+    margin-bottom: 15px;
+    h6 {
+      text-transform: uppercase;
+    }
+    h6, p {
+      margin: 0;
+	    line-height: 1;
+	    font-size: 17px;
+    }
+    p {
+      line-height: 1.6;
+	    letter-spacing: 0.075em;
+    }
+    .contact__link {
+      text-decoration: none;
+      color: $primaryColor;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}
+.contact__form {
+  input {
+    width: 88.2%;
+	  position: relative;
+	  background: $inputBg;
+	  color: $whiteColor;
+	  padding: 16px 20px;
+	  border: none;
+	  margin-bottom: 13px;
+    &::placeholder {
+      color: inherit;
+    }
+  }
+  .contact__message {
+    width: 88.2%;
+	  padding: 14px 20px;
+	  background: $inputBg;
+	  border: none;
+	  height: 250px;
+	  color: $whiteColor;
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
+.button--contact {
+  display: block;
+	margin: 0 auto;
+	background: $contactBtnBg;
+	margin-top: 30px;
+	color: $whiteColor;
+	width: 200px;
+  &:hover {
+    color: $contactBtnBg;
+  }
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-left: 6px solid $inputBorder;
+}
+#contact-form textarea:focus,
+#contact-form input:focus,
+textarea:focus::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+	font-weight: bold;
+}
